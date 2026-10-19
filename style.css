@@ -1,0 +1,100 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background-color: white;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 25px;
+}
+
+#form-tarefa {
+    display: flex;
+    gap: 8px;
+}
+
+#input-tarefa {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2878d0;
+    color: white;
+    cursor: pointer;
+}
+
+#aviso {
+    color: #c62828;
+}
+
+#contador {
+    color: #555;
+}
+
+#lista-tarefas {
+    list-style: none;
+    padding: 0;
+}
+
+#lista-tarefas li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.texto-tarefa {
+    overflow-wrap: anywhere;
+    cursor: pointer;
+}
+
+.concluida {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.botao-remover {
+    background-color: #d93025;
+}
+
+#lista-tarefas:empty::after {
+    content: "Nenhuma tarefa adicionada.";
+    display: block;
+    padding: 15px 0;
+    color: #777;
+    text-align: center;
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 21px;
+    }
+
+    #form-tarefa {
+        flex-direction: column;
+    }
+}
